@@ -3,7 +3,7 @@
  * When you're ready to start on your site, clear the file. Happy hacking!
  **/
  const baseUrl = "https://platzi-avo.vercel.app";
-
+const appNode = document.querySelector("#app");
 //web api
 //conectarnos al servidos
 window
@@ -30,6 +30,6 @@ window
 
       todosLosItems.push(container);
   });
-  document.body.append(...todosLosItems);
+  appNode.append(...todosLosItems);
 });
 
