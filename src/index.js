@@ -4,6 +4,16 @@
  **/
  const baseUrl = "https://platzi-avo.vercel.app";
 const appNode = document.querySelector("#app");
+
+const formatPrice = (price) => {
+const newPrice = new window.Intl.NumberFormat("en-EN", {
+  style: "currency",
+  currency: "USD",
+}).format(price);
+
+  return newPrice;
+};
+
 //web api
 //conectarnos al servidos
 window
@@ -22,10 +32,11 @@ window
       const title = document.createElement("h2");
       title.textContent = item.name;
       //title.style = "font-size: 2rem";
-      title.className = "text-3xl text-pink-600";
+      title.className = "text-5xl text-pink-600";
       //crear precio
       const price = document.createElement("div");
-      price.textContent = item.price;
+      price.className = "text-gray-600";
+      price.textContent = formatPrice(item.price);
 
       const container = document.createElement("div");
       container.append(imagen, title, price);
