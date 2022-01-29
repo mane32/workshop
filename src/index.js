@@ -19,8 +19,10 @@ window
 
       //crear titulo
       const title = document.createElement("h2");
+      title.textContent = item.name;
       //crear precio
       const price = document.createElement("div");
+      price.textContent = item.price;
 
       const container = document.createElement("div");
       container.append(imagen, title, price);
