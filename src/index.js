@@ -21,6 +21,8 @@ window
       //crear titulo
       const title = document.createElement("h2");
       title.textContent = item.name;
+      //title.style = "font-size: 2rem";
+      title.className = "text-3xl text-pink-600";
       //crear precio
       const price = document.createElement("div");
       price.textContent = item.price;
